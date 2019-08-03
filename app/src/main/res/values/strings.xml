@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Self Study</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="school">school</string>
+    <string name="profile">profile</string>
+    <string name="inbox">inbox</string>
+    <string name="your_free_trial_expired_on_29_july_2019_please_upgrade">Your free trial expired on 29 July 2019, \nPlease Upgrade now to get full access.</string>
+    <string name="subjects">Subjects</string>
+    <string name="add">add</string>
+    <string name="todo">TODO</string>g>
+    <string name="upgrade_now">Upgrade Now</string>
+    <string name="subjectname">Mental Ability</string>
+    <string name="_0">0%</string>
+    <string name="progress">Progress</string>
+</resources>

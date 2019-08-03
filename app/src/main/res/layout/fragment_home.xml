@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey">
+
+    <ImageView
+        android:id="@+id/banner_image"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/banner_image"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/todo" />
+    
+    <androidx.cardview.widget.CardView
+        android:id="@+id/upgrade_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/banner_image"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/upgrade_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="20dp"
+                android:src="@drawable/biology"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="297dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@id/upgrade_image"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/your_free_trial_expired_on_29_july_2019_please_upgrade"
+                android:textSize="13.5sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/green"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat"
+                android:text="Upgrade Now" />
+
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/list_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="5dp"
+        android:elevation="2dp"
+        android:layout_below="@id/upgrade_cardview">
+
+        <LinearLayout
+            android:id="@+id/subjectTextRel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/SubjectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserrat"
+                android:text="@string/subjects"
+                android:textSize="15sp"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardV1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp"
+            android:elevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/biology"
+                    android:background="@color/light_blue" />
+
+                <TextView
+                    android:id="@+id/subjectName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/subjectname"
+                    android:layout_toRightOf="@id/imageView2"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imageView2"
+                    android:layout_below="@id/subjectName">
+
+                <TextView
+                    android:id="@+id/progressText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/progress"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_marginLeft="10dp"/>
+
+                <ProgressBar
+                    android:id="@+id/simpleProgressBar"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/progressText"
+                    android:max="100"
+                    android:progressBackgroundTint="@color/blue"
+                    android:progress="0" />
+
+                <TextView
+                    android:id="@+id/percentageProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_toRightOf="@id/simpleProgressBar"
+                    android:text="@string/_0"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="2dp"
+                android:layout_below="@id/cardV1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/biology"
+                        android:background="@color/light_blue" />
+
+                    <TextView
+                        android:id="@+id/subjectName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Physics"
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/imageView3"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imageView3"
+                        android:layout_below="@id/subjectName1">
+
+                        <TextView
+                            android:id="@+id/progressText1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Progress"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_marginLeft="10dp"/>
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar1"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@id/progressText1"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/blue"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/percentageProgress1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_toRightOf="@id/simpleProgressBar1"
+                            android:text="0%"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="2dp"
+                android:layout_below="@id/cardV2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@color/light_blue"
+                        android:src="@drawable/biology" />
+
+                    <TextView
+                        android:id="@+id/subjectName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chemistry"
+                        android:layout_toRightOf="@id/imageView4"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imageView4"
+                        android:layout_below="@id/subjectName2">
+
+                        <TextView
+                            android:id="@+id/progressText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Progress"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_marginLeft="10dp"/>
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar2"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@id/progressText2"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/blue"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/percentageProgress2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_toRightOf="@id/simpleProgressBar2"
+                            android:text="0%"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV4"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="2dp"
+                android:layout_below="@id/cardV3">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:background="@color/light_blue"
+                        android:src="@drawable/biology"
+                         />
+
+                    <TextView
+                        android:id="@+id/subjectName3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mathematics"
+                        android:layout_toRightOf="@id/imageView5"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:textSize="18sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imageView5"
+                        android:layout_below="@id/subjectName3">
+
+                        <TextView
+                            android:id="@+id/progressText3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Progress"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/montserrat"
+                            android:layout_marginLeft="10dp"/>
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar3"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@id/progressText3"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/blue"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/percentageProgress3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_toRightOf="@id/simpleProgressBar3"
+                            android:text="0%"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV5"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="5dp"
+                android:elevation="2dp"
+                android:layout_below="@id/cardV4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/biology"
+                        android:background="@color/light_blue"
+                        tools:layout_editor_absoluteX="5dp"
+                        tools:layout_editor_absoluteY="0dp"
+                         />
+
+                    <TextView
+                        android:id="@+id/subjectName4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biology"
+                        android:fontFamily="@font/montserrat"
+                        android:textStyle="bold"
+                        android:layout_toRightOf="@id/imageView6"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="18sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/imageView6"
+                        android:layout_below="@id/subjectName4">
+
+                        <TextView
+                            android:id="@+id/progressText4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Progress"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="10dp"/>
+
+                        <ProgressBar
+                            android:id="@+id/simpleProgressBar4"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@id/progressText4"
+                            android:max="100"
+                            android:progressBackgroundTint="@color/blue"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/percentageProgress4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="1dp"
+                            android:layout_toRightOf="@id/simpleProgressBar4"
+                            android:text="0%"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+</ScrollView>
